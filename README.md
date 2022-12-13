@@ -26,8 +26,8 @@ This ROS2 Driver is for Autonics LSC Series
 * range_min(default : 0.05, type : double) - Minimum range value [m]
 * range_max(default : 25.0, type : double) - Maximum range value [m]
 * intensities(default : true, type : string) - A flag to choose whether putting intensities information into topic message
-* pub_topic(default : scan. type : string) - The name of published topic
 ##### 2.2.2 Static
+* pub_topic(default : scan. type : string) - The name of published topic
 * diagnostics_tolerance(default : 0.1, type : double) - Tolerance of topic frequency
 * diagnostics_windows_time(default : 1, type : int) - Number of events to consider in the statics 
 

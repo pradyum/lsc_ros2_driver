@@ -56,32 +56,39 @@ This ROS2 Driver is for Autonics LSC Series
     #foxy
     C:\dev\ros2_foxy\local_setup.bat
     mkdir -p C:\dev\colcon_ws\src 
+    cd C:\dev\colcon_ws
+    colcon build --symlink-install
+    C:\dev\colcon_ws\install\local_setup.bat
+   
     cd C:\dev\colcon_ws\src
     git clone https://github.com/AutonicsLiDAR/lsc_ros2_driver.git
     git clone https://github.com/ros/diagnostics.git -b foxy
     cd C:\dev\colcon_ws
-    colcon build --symlink-install
-    source C:\dev\colcon_ws\install\local_setup.bat
     
     colcon build --packages-select diagnostic_updater --event-handlers console_direct+
     colcon build --packages-select lsc_ros2_driver --event-handlers console_direct+
+    
+    C:\dev\colcon_ws\install\local_setup.bat
     
     
     #humble
     C:\dev\ros2_humble\local_setup.bat
     mkdir -p C:\dev\colcon_ws\src 
-    cd C:\dev\colcon_ws\src
-    git clone https://github.com/AutonicsLiDAR/lsc_ros2_driver.git
-    git clone https://github.com/ros/diagnostics.git -b ros2-devel
     cd C:\dev\colcon_ws
     colcon build --symlink-install
-    source C:\dev\colcon_ws\install\local_setup.bat
+    C:\dev\colcon_ws\install\local_setup.bat
+    
+    cd C:\dev\colcon_ws\src
+    git clone https://github.com/AutonicsLiDAR/lsc_ros2_driver.git
+    git clone https://github.com/ros/diagnostics.git -b humble
+    cd C:\dev\colcon_ws
     
     colcon build --packages-select diagnostic_updater --event-handlers console_direct+
     colcon build --packages-select lsc_ros2_driver --event-handlers console_direct+
     
-    source C:\dev\colcon_ws\install\local_setup.bat
-    
+    C:\dev\colcon_ws\install\local_setup.bat
+   
+   
 ####   3.2 from binary
     sudo apt install ros-$ROS_DISTRO-lsc-ros2-driver
 

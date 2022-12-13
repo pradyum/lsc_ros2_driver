@@ -49,6 +49,8 @@ This ROS2 Driver is for Autonics LSC Series
     cd ~/colcon_ws 
     colcon build --packages-select lsc_ros2_driver --event-handlers console_direct+
     
+    source ~/colcon_ws/install/local_setup.bash
+    
     
 ##### 3.1.2 WINDOWS
     #foxy

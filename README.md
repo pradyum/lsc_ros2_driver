@@ -81,7 +81,7 @@ This ROS2 Driver is for Autonics LSC Series
     source C:\dev\colcon_ws\install\local_setup.bat
     
 ####   3.2 from binary
-    sudo apt install ros-$ROS_DISTRO-lsc-ros-driver
+    sudo apt install ros-$ROS_DISTRO-lsc-ros2-driver
 
 
 ### 4. Start

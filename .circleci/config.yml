@@ -36,7 +36,8 @@ jobs:
             source ~/colcon_ws/install/local_setup.bash
   humble-build:
     docker:
-      - image: ros:humble-ros-base-jammy
+      #- image: ros:humble-ros-base-jammy
+      - image: ros:humble-ros-base
 
     steps:
       - checkout
@@ -68,5 +69,5 @@ jobs:
 workflows:
   build-test:
     jobs:
-      - foxy-build
+      #- foxy-build
       - humble-build

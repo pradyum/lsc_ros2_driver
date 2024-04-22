@@ -21,10 +21,8 @@ jobs:
             colcon build --symlink-install
             source ~/colcon_ws/install/local_setup.bash
             cd ~/colcon_ws/src
-            sudo apt update
-            sudo apt -y install git
-            sudo apt install -y ssh
             git clone https://github.com/AutonicsLiDAR/lsc_ros2_driver.git
+            sudo apt update
             sudo apt install ros-foxy-diagnostic-updater
             cd ~/colcon_ws
             colcon build --packages-select lsc_ros2_driver --event-handlers console_direct+
@@ -37,8 +35,7 @@ jobs:
             source ~/colcon_ws/install/local_setup.bash
   humble-build:
     docker:
-      #- image: ros:humble-ros-base-jammy
-      - image: ros:humble-ros-base
+      - image: ros:humble-ros-base-jammy
 
     steps:
       - checkout
@@ -52,10 +49,8 @@ jobs:
             colcon build --symlink-install
             source ~/colcon_ws/install/local_setup.bash
             cd ~/colcon_ws/src
-            sudo apt update
-            sudo apt install -y git
-            sudo apt install -y ssh
             git clone https://github.com/AutonicsLiDAR/lsc_ros2_driver.git
+            sudo apt update
             sudo apt install ros-humble-diagnostic-updater
             cd ~/colcon_ws
             colcon build --packages-select lsc_ros2_driver --event-handlers console_direct+
